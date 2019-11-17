@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
 
 ik ga lokaal nog een regel toevoegen
 WebstormProjects\untitled\img\git_oefening\git_oefeningen\testbastand.txt
+=======
+dit is een tweede regel tekst
+ik ga ene regel toevoegen
+>>>>>>> 04c6ba59263cb30adbb93c688a38278c94bfb82b
