@@ -1,3 +1,4 @@
 
-dit is een tweede regel tekst
+
 ik ga lokaal nog een regel toevoegen
+WebstormProjects\untitled\img\git_oefening\git_oefeningen\testbastand.txt
