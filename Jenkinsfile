@@ -51,7 +51,8 @@ pipeline {
     }
 	 post {
 		    success {
-			    archiveArtifacts 'bundle.zip'
+			   archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+            		   junit 'build/reports/**/*.xml'
 		    }
 		    failure {
             		    sh 'cat build is gefaald > error.txt'
