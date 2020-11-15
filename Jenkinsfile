@@ -16,6 +16,8 @@ pipeline {
 	stage('install dependencies') {
 	    steps {
 		echo 'installing dependencies'
+		    sh ' pwd > waar.txt'
+		    sh ' cat waar.txt'
 		sh 'sudo visudo'    
 		sh 'composer install'
 		sh 'sudo apt-get update'
