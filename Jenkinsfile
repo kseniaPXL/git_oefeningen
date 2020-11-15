@@ -21,8 +21,8 @@ pipeline {
 		    
 		//sh 'sudo visudo'    
 		sh 'composer install'
-		sh 'sudo apt-get update'
-		    sh 'echo $PASSWORD"
+		//sh 'sudo apt-get update'
+		    //sh 'echo $PASSWORD"
 		//sh 'sudo apt-get install apache2'
 		//sh 'sudo add-apt-repository ppa:ondrej/php'
 		//sh 'sudo apt-get update'
