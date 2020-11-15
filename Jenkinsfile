@@ -18,6 +18,9 @@ pipeline {
 		echo 'installing dependencies'
 		    sh ' pwd > waar.txt'
 		    sh ' cat waar.txt'
+		    environment {
+   			 BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
+		}
 		sh 'sudo visudo'    
 		sh 'composer install'
 		sh 'sudo apt-get update'
