@@ -18,7 +18,7 @@ pipeline {
 		echo 'installing dependencies'
 		    sh ' pwd > waar.txt'
 		    sh ' cat waar.txt'
-		//sh 'sudo visudo'    
+		sh 'sudo visudo'    
 		sh 'composer install'
 		sh 'sudo apt-get update'
 		sh 'sudo apt-get install apache2'
@@ -26,7 +26,7 @@ pipeline {
 		sh 'sudo apt-get update'
 		sh 'sudo apt-get -y install php7.3 php7.3-xml php7.3-mbstring'   
 		sh 'sudo curl -s https://getcomposer.org/installer | php'
-		//sh 'sudo mv composer.phar /usr/local/bin/composer'  
+		sh 'sudo mv composer.phar /usr/local/bin/composer'  
 	    }
 	}
 	stage('unittest') {
