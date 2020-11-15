@@ -60,7 +60,7 @@ pipeline {
     }
 	 post {
 		    success {
-			   archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+			   archiveArtifacts artifacts: 'build/libs/**/*.xml', fingerprint: true
             		   junit 'build/reports/**/*.xml'
 		    }
 		    failure {
