@@ -36,7 +36,8 @@ pipeline {
 		echo 'Running unit tests'
 		sh './vendor/bin/phpunit tests'   
 		echo 'Building a JUnit report'
-		sh 'vendor/bin/phpunit -c build/phpunit.xml || exit 0'
+		sh 'vendor/bin/phpunit -c build/reports/**/phpunit.xml || exit 0'
+		//junit 'build/reports/**/*.xml'    
 		//phpunit --log-junit report.xml   
 		//junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
 	    }
