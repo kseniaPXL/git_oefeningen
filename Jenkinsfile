@@ -18,18 +18,16 @@ pipeline {
 		echo 'installing dependencies'
 		    sh ' pwd > waar.txt'
 		    sh ' cat waar.txt'
-		    environment {
-   			 BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
-		}
-		sh 'sudo visudo'    
+		    
+		//sh 'sudo visudo'    
 		sh 'composer install'
 		sh 'sudo apt-get update'
-		sh 'sudo apt-get install apache2'
-		sh 'sudo add-apt-repository ppa:ondrej/php'
-		sh 'sudo apt-get update'
-		sh 'sudo apt-get -y install php7.3 php7.3-xml php7.3-mbstring'   
+		//sh 'sudo apt-get install apache2'
+		//sh 'sudo add-apt-repository ppa:ondrej/php'
+		//sh 'sudo apt-get update'
+		//sh 'sudo apt-get -y install php7.3 php7.3-xml php7.3-mbstring'   
 		sh 'sudo curl -s https://getcomposer.org/installer | php'
-		sh 'sudo mv composer.phar /usr/local/bin/composer'  
+		sh 'sudo mv composer.phar /var/lib/jenkins/workspace/composer'  
 	    }
 	}
 	stage('unittest') {
