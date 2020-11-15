@@ -43,10 +43,10 @@ pipeline {
 	    steps {
 		 echo 'making the bundle and zipping the file'
     		 sh 'mkdir bundle'
-		 sh 'mv composer.json bundle' 
-		 sh 'mv docker-compose.yml bundle'  
-		  sh 'mv dockerfile  bundle' 
-		 sh 'mv index.php bundle'   
+		 sh 'mv composer.json bundle/' 
+		 sh 'mv docker-compose.yml bundle/'  
+		  sh 'mv dockerfile  bundle/' 
+		 sh 'mv index.php bundle/'   
 		 sh 'zip -r bundle.zip bundle'
 		 //sh 'mv bundle.zip bundle'
 	    }
