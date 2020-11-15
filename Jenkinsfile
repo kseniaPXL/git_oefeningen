@@ -36,7 +36,9 @@ pipeline {
 		echo 'Running unit tests'
 		sh './vendor/bin/phpunit tests'   
 		echo 'Building a JUnit report'
-		junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
+		sh 'vendor/bin/phpunit -c build/phpunit.xml || exit 0'
+		//phpunit --log-junit report.xml   
+		//junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
 	    }
 	}
    stage('create bundle') {
