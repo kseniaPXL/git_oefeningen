@@ -43,8 +43,9 @@ pipeline {
 	    steps {
 		 echo 'making the bundle and zipping the file'
     		 sh 'mkdir bundle'
-		 sh 'zip -r bundle.zip composer.json docker-compose.yml dockerfile index.php tests src assets'
-		 sh 'mv bundle.zip bundle'
+		 sh 'cp * bundle'   
+		 sh 'zip -r bundle.zip bundle'
+		 //sh 'mv bundle.zip bundle'
 	    }
 	}
 	   
