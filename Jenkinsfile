@@ -55,8 +55,8 @@ pipeline {
 		    }
 		    failure {
             		    sh 'cat build is gefaald > error.txt'
-			    sh 'mv error.txt /home/jenkins'
-        }
+			    //sh 'mv error.txt /home/jenkins'
+        			}
 	    }
-}
+	}
 }
