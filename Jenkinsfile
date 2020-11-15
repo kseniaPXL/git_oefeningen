@@ -41,6 +41,8 @@ pipeline {
 	}
    stage('create bundle') {
 	    steps {
+		 sh 'rm -rf bundle'
+		 sh 'rm -rf bundle.zip'   
 		 echo 'making the bundle and zipping the file'
     		 sh 'mkdir bundle'
 		 sh 'mv composer.json bundle/' 
