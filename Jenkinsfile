@@ -39,5 +39,24 @@ pipeline {
 		junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
 	    }
 	}
-    }
+   stage('create bundle') {
+	    steps {
+		 echo 'making the bundle and zipping the file'
+    		 sh 'mkdir bundle'
+		 sh 'zip -r bundle.zip composer.json docker-compose.yml dockerfile index.php tests src assets'
+		 sh 'mv bundle.zip bundle'
+	    }
+	}
+	   
+   
+	 post {
+		    success {
+			    archiveArtifacts 'bundle.zip'
+		    }
+		    failure {
+            		    sh 'cat build is gefaald > error.txt'
+			    sh 'mv error.txt /home/jenkins'
+        }
+	    }
+}
 }
