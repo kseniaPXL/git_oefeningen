@@ -48,7 +48,7 @@ pipeline {
 	    }
 	}
 	   
-   
+    }
 	 post {
 		    success {
 			    archiveArtifacts 'bundle.zip'
@@ -59,4 +59,4 @@ pipeline {
         			}
 	    }
 	}
-}
+
